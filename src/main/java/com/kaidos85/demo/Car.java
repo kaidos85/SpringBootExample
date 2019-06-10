@@ -2,7 +2,9 @@ package com.kaidos85.demo;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "Cars")
 public class Car {
@@ -15,19 +17,7 @@ public class Car {
     @Column(name = "name")
     private String name;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Column(name="carmodel")
+    @Enumerated(EnumType.STRING)
+    private CarModelType ModelType;
 }

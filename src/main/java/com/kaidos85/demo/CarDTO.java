@@ -1,14 +1,10 @@
 package com.kaidos85.demo;
 
+import lombok.Data;
+
+@Data
 public class CarDTO {
 
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private CarModelType modelType;
 }

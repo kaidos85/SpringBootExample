@@ -45,6 +45,7 @@ public class CarController {
     public Object insertCar(@RequestBody CarDTO dto){
         Car car = new Car();
         car.setName(dto.getName());
+        car.setModelType(dto.getModelType());
         return repository.saveAndFlush(car);
     }
 
